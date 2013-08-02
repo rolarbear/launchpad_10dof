@@ -2,7 +2,7 @@
  *
  * Default Linker Command file for the Texas Instruments LM4F120H5QR
  *
- * This is part of revision 9102 of the Stellaris Peripheral Driver Library.
+ * This is part of revision 10114 of the Stellaris Peripheral Driver Library.
  *
  *****************************************************************************/
 
@@ -33,6 +33,7 @@ SECTIONS
     .const  :   > FLASH
     .cinit  :   > FLASH
     .pinit  :   > FLASH
+    .init_array : > FLASH
 
     .vtable :   > 0x20000000
     .data   :   > SRAM
@@ -41,4 +42,4 @@ SECTIONS
     .stack  :   > SRAM
 }
 
-__STACK_TOP = __stack + 256;
+__STACK_TOP = __stack + 512;
